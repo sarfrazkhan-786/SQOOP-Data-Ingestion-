@@ -4,7 +4,7 @@ cat tables_116_230|while read LINE
 do
   DBTABLE=${LINE}
   sqoop import "-Dorg.apache.sqoop.splitter.allow_text_splitter=true" \
-  --connect 'jdbc:sqlserver://PRDASPSQL;database=DM_LIMS_PRD' \
+  --connect 'jdbc:sqlserver://HOSTNAME;database=DATABASE_NAME' \
   --username lims_user_ro \
   --password-file /user/reach_sakhan/dcl_labware/labware.passwrd \
   --table ${LINE} \
